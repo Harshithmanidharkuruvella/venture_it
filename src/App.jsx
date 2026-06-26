@@ -9,7 +9,6 @@ import Industries from './components/Industries';
 import WhyUs from './components/WhyUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Cursor from './components/Cursor';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 
@@ -39,7 +38,6 @@ export default function App() {
   }, []);
   return (
     <>
-      <Cursor />
       <Navbar />
       <main>
         <Hero />
