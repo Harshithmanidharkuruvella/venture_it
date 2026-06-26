@@ -1,0 +1,106 @@
+/* ============================================
+   LEADERSHIP SECTION
+   ============================================ */
+
+.leadership {
+  position: relative;
+  overflow: hidden;
+}
+
+.leadership__header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.leadership__header .section-subtitle {
+  margin: 0 auto;
+}
+
+.leadership__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.leadership__card {
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.leadership__card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.leadership__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leadership__card:nth-child(even) .leadership__avatar {
+  color: var(--color-secondary);
+}
+
+.leadership__card:nth-child(odd) .leadership__avatar {
+  color: var(--color-primary);
+}
+
+.leadership__name {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+  color: white;
+}
+
+.leadership__role {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.leadership__bio {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .leadership__grid,
+  .leadership__grid--top,
+  .leadership__grid--bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .leadership__grid,
+  .leadership__grid--top,
+  .leadership__grid--bottom {
+    grid-template-columns: 1fr;
+  }
+}
